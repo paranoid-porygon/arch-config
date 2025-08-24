@@ -1,0 +1,5 @@
+# overrides for default newsboat profile
+
+netfilter /etc/firejail/nolocal.net
+
+whitelist /mnt/sd00/home/coolporygon/.newsboat

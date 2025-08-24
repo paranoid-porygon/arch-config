@@ -1,0 +1,4 @@
+apparmor
+netfilter /etc/firejail.nolocal.net
+whitelist ~/downloads/dillo
+

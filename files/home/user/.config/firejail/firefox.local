@@ -1,0 +1,23 @@
+apparmor
+netfilter /etc/firejail/nolocal.net
+whitelist ~/downloads/firefox
+rlimit-as 2000000000000
+
+# see if this fixes videos not having sound issue
+ignore novideo
+ignore nosound
+
+
+# needed to make KeePassXC work
+ignore include whitelist-runuser-common.inc
+whitelist ${RUNUSER}/kpxc_server
+whitelist ${RUNUSER}/org.keepassxc.KeePassXC.BrowserServer
+writable-run-user
+
+# arch linux needs shell to launch Firefox
+private-bin bash,dbus-launch,dbus-send,env,firefox,sh,which,keepassxc-proxy
+
+
+
+# unsure if needed, but will also need to be in firefox-common.local
+#private-etc firefox

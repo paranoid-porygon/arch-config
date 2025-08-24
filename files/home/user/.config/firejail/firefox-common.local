@@ -1,0 +1,9 @@
+# unsure if needed, but will also need to be in firefox.local
+#private-etc firefox
+
+# might help KeePassXC to work
+noblacklist ${RUNUSER}/app
+whitelist ${RUNUSER}/app/org.keepassxc.KeePassXC
+whitelist ${RUNUSER}/kpxc_server
+whitelist ${RUNUSER}/org.keepassxc.KeePassXC.BrowserServer
+include firefox-common-addons.profile

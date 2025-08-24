@@ -1,0 +1,19 @@
+# refresh page
+  xte 'F5'
+
+# toggle fullscreen in i3
+@F4
+  xte 'keydown Alt_L' 'key f' 'keyup Alt_L'
+
+#toggle container layout in i3
+@F5
+  xte 'keydown Alt_L' 'key x' 'keyup Alt_L'
+
+{F6,F7}
+  xbacklight -{dec,inc} 10
+
+F8
+  amixer set Master toggle
+
+{F9,F10}
+  amixer set Master 5{-,+} unmute
