@@ -1,0 +1,30 @@
+!URxvt Colorscheme
+
+URxvt*background: Black
+URxvt*foreground: #FFC800
+URxvt*colorUL: cyan
+URxvt*underlineColor: cyan
+
+!! URxvt Appearance
+
+URxvt.geometry: 92x24
+!URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+!URxvt.depth: 24
+
+!!URxvt extensions
+
+URxvt.perl-ext-common: tabbed,default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-C-v: perl:clipboard:paste
+!URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+URxvt.urlLauncher: dillo
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
