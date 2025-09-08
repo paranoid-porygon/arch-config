@@ -59,12 +59,7 @@
 
 
 # install software
-sudo pacman -S i3-wm i3status-rust otf-font-awesome dmenu sxhkd fbctrl \ 
-rxvt-unicode xsel urxvt-perls vim vim-jedi glow w3m \ 
-apparmor iptables clamav rkhunter firejail keepassxc privoxy tor signal-desktop \
-git yay-git rclone \
-pipewire pavucontrol firefox libreoffice newsboat \
-unzip
+sudo pacman -S i3-wm i3status-rust otf-font-awesome dmenu sxhkd fbctrl rxvt-unicode xsel urxvt-perls vim vim-jedi glow w3m apparmor iptables clamav rkhunter firejail keepassxc privoxy tor signal-desktop git yay-git rclone pipewire pavucontrol firefox libreoffice newsboat unzip
 
 yay -S mullvad-vpn-bin
 # sudo pacman -S w3m arch-wiki-lite expressvpn midori neofetch tor-browser
