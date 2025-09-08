@@ -59,18 +59,17 @@
 
 
 # install software
-sudo pacman -S blackbox sxhkd fbctrl vim glow terminator clamav git keepassxc privoxy pipewire rkhunter tor vim-jedi yay-git firejail firefox
+sudo pacman -S i3-wm i3status-rust otf-font-awesome dmenu sxhkd fbctrl \ 
+rxvt-unicode xsel urxvt-perls vim vim-jedi glow w3m \ 
+apparmor iptables clamav rkhunter firejail keepassxc privoxy tor signal-desktop \
+git yay-git rclone \
+pipewire pavucontrol firefox libreoffice newsboat \
+unzip
+
+yay -S mullvad-vpn-bin
 # sudo pacman -S w3m arch-wiki-lite expressvpn midori neofetch tor-browser
 
 # update config files
-
-## /etc/dhcpcd.conf 
-# add the following to EOF
-
-## manually specify DNS servers to query
-## 1.1.1.1 1.0.0.1 is Cloudflare
-## 8.8.8.8 8.8.4.4 is Google
-#static domain_name_servers=8.8.4.4 8.8.8.8
 
 ## /etc/systemd/system/root-suspend.service
 # actions to perform when system suspends
@@ -82,9 +81,6 @@ sudo pacman -S blackbox sxhkd fbctrl vim glow terminator clamav git keepassxc pr
 # *ping
 # *firefox
 # *tor
-
-## ~/.blackbox/menu
-#blackbox wm menu
 
 ## fix suspend issues via grub config
 # https://wiki.archlinux.org/title/Chrome_OS_devices#Fixing_suspend
