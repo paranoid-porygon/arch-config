@@ -2,12 +2,11 @@ apparmor
 base
 base-devel
 bc
-blackbox
 clamav
-dillo
 dmenu
 firefox
 firejail
+gimp
 git
 glow
 grub
@@ -26,7 +25,7 @@ libva-intel-driver
 linux-firmware
 linux-hardened
 man-db
-netsurf
+net-tools
 nmap
 ntfs-3g
 openssh
@@ -44,10 +43,12 @@ ruby-erb
 rxvt-unicode
 signal-desktop
 sxhkd
+transmission-cli
 unzip
-upower
 urxvt-perls
 vim
+vim-ansible
+vim-jedi
 vulkan-intel
 w3m
 wireplumber

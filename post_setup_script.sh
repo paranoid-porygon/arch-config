@@ -1,8 +1,14 @@
 #!/bin/bash
-#
-# This will become the script to run after the base arch install.
-# For now, I am just going to make a list of packages that I remember that I installed and will turn it into a proper script later,
-#
+#############################################################################
+# This script is meant to expedite the installation of Arch, automating the #
+# setup of dotfiles and packages that I regularly use. It is primarily      #
+# to be used on low-resource platforms such as netbooks and chromebooks     #
+# with no less than 4Gb of memory. That does not preclude it from being     #
+# used on higher-end machines or larger screens, however you may end up     #
+# having to do some manual tweaking to make it usable.                      #
+#############################################################################
+
+
 # TODO: script the installation of the following packages
 # * blackbox
 # * sxhkd
@@ -56,10 +62,13 @@
 # * KeepassXC
 # * apparmor
 # * fix suspend issues via grub config
+# * rclone configuration
 
 
 # install software
-sudo pacman -S i3-wm i3status-rust otf-font-awesome dmenu sxhkd fbctrl rxvt-unicode xsel urxvt-perls vim vim-jedi glow w3m apparmor iptables clamav rkhunter firejail keepassxc privoxy tor signal-desktop base-devel git rclone pipewire pavucontrol firefox libreoffice-fresh newsboat unzip
+#sudo pacman -S i3-wm i3status-rust otf-font-awesome dmenu sxhkd fbctrl rxvt-unicode xsel urxvt-perls vim vim-jedi glow w3m apparmor iptables clamav rkhunter firejail keepassxc privoxy tor signal-desktop base-devel git rclone pipewire pavucontrol firefox libreoffice-fresh newsboat unzip
+
+sudo pacman -S - < pacman-pkglist.txt
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -67,7 +76,6 @@ makepkg -si
 yay --version
 
 yay -S mullvad-vpn-bin
-# sudo pacman -S w3m arch-wiki-lite expressvpn midori neofetch tor-browser
 
 # update config files
 
