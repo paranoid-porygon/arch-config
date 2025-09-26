@@ -9,8 +9,11 @@ sudo pacman -Syu # systemwide update
 
 
 cd /tmp
-sudo pacman -R yay-bin yay-bin-debug  # remove old yay bins
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay-git && makepkg -si  # reinstall yay from source
+#sudo pacman -R yay-bin yay-bin-debug  # remove old yay bins
+sudo pacman -S --needed git base-devel # make sure needed packages for compilation are installed
+git clone https://aur.archlinux.org/yay.git  # clone yay from aur repo
+cd yay-git
+makepkg -si  # reinstall yay from source
 yay -Syu  # update AUR packages now that official packages are already updated
 
 
