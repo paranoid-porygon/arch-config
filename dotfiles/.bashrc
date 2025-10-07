@@ -15,6 +15,8 @@ NC='[0m' # No Color or formatting, use at end
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export EDITOR="vim"
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
@@ -25,10 +27,17 @@ alias cd..='cd ..'
 # alias custom scripts
 #alias connect_to_wifi='exec /home/coolporygon/scripts/connect_to_wifi.sh'
 alias wget_page='wget --random-wait -r -p -e -robots=off -U mozilla'
-
+alias ephemeralfox='firejail --profile=~/.config/firejail/ephemeralfox.local fierfox -P ephemeral'
 
 echo -e "Type the \e${REVERSE}README\e${NC} command for help."
-PS1='\n\e${NC}\e${BOLD}┌[\e${PURPLE}\w\e${NC}\e${BOLD}]\n├◷\e${RED}\D{%Y/%m/%d} \t\e${NC}\e${BOLD}\n├\e${BOLD}{\e${LIGHTCYAN}\u\e${NC}\e${BOLD}@\e${YELLOW}\H\e${NC}\e${BOLD}}\n└\e${BOLD}\$\e${NC} '
+#PS1='\n\e${NC}\e${BOLD}┌[\e${PURPLE}\w\e${NC}\e${BOLD}]\n├◷\e${RED}\D{%Y/%m/%d} \t\e${NC}\e${BOLD}\n├\e${BOLD}{\e${LIGHTCYAN}\u\e${NC}\e${BOLD}@\e${YELLOW}\H\e${NC}\e${BOLD}}\n└\e${BOLD}\$\e${NC} '
+#PS1='\n\e${NC}\e${BOLD}┌[\e${PURPLE}\w\e${NC}\e${BOLD}]\e${RED}\D{%Y/%m/%d} \t\e${NC}\e${BOLD}\e${BOLD}{\e${LIGHTCYAN}\u\e${NC}\e${BOLD}@\e${YELLOW}\H\e${NC}\e${BOLD}}\n└\e${BOLD}\$\e${NC} '
 
+# NOTE: the \[ and \] are needed to properly terminate the colors
+PS1='\[\e${NC}\e${BOLD}\]
+┌◷\[\e${RED}\]\D{%Y/%m/%d} \t\[\e${NC}\]\[\e${BOLD}\]
+├\[\e${BOLD}\]{\[\e${LIGHTCYAN}\]\u\[\e${NC}\]\[\e${BOLD}\]@\[\e${YELLOW}\]\H\[\e${NC}\]\[\e${BOLD}\]}
+├[\[\e${PURPLE}\]\w\[\e${NC}\]\[\e${BOLD}\]]
+└\[\e${BOLD}\]\$\[\e${NC}\] '
 
 #PS1='[\u@\h \W]\$ '

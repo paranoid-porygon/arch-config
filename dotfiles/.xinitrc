@@ -54,4 +54,5 @@ fi
 #exec $xterm -geometry 80x66+0+0 -name login
 
 exec sxhkd &
-exec i3
+exec i3 &
+exec keepassxc
