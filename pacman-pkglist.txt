@@ -14,7 +14,6 @@ git
 glow
 grub
 gst-plugin-pipewire
-hfsprogs
 i3-wm
 i3status-rust
 impala
@@ -26,12 +25,10 @@ libreoffice-fresh
 linux-firmware
 linux-hardened
 man-db
-mullvad-vpn-bin
 net-tools
 nmap
 ntfs-3g
 openssh
-openvpn
 otf-font-awesome
 pavucontrol
 pipewire
@@ -45,8 +42,6 @@ ruby
 ruby-erb
 rxvt-unicode
 signal-desktop
-sxhkd
-transmission-cli
 unzip
 urxvt-perls
 vim
@@ -60,4 +55,3 @@ xorg-xinit
 xpra
 xsel
 xterm
-yay-git
