@@ -28,6 +28,18 @@ yay -Syu  # update AUR packages now that official packages are already updated
 #sudo pacman -Qdtq | sudo pacman -Rs -  # use with caution since this might be needed
 yay -Sc
 
+
+####### Firmware Update #######
+
+# update firmware
+sudo pacman -S fwupd flashrom linux-firmware git wget vim
+# there's a bug with the current fwupd package so use 2.0.13-1 instead
+sudo rm /var/lib/fwupd/pending.db
+sudo pacman -U https://archive.archlinux.org/packages/f/fwupd/fwupd-2.0.13-1-x86_64.pkg.tar.zst
+fwupdmgr refresh
+fwupdmgr update
+
+
 read -p "Press any key to reboot... " -n 1 -s -r
 echo -e "\n"
 
