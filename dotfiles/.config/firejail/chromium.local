@@ -1,0 +1,21 @@
+# Local config for Chromium, based on my Firefox profile
+#
+
+apparmor
+netfilter /etc/firejail/nolocal.net
+mkdir ~/Downloads/chromium
+whitelist ~/Downloads/chromium
+
+# needed to make KeePassXC work
+whitelist ${RUNUSER}/kpxc_server
+whitelist ${RUNUSER}/org.keepassxc.KeePassXC.BrowserServer
+writable-run-user
+
+# bizarrely not included in default chromium.profile
+private-etc chromium
+
+# anonymize machine id
+# comment out if sound breaks
+machine-id
+
+

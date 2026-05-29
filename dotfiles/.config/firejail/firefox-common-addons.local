@@ -1,1 +1,7 @@
-private-bin keepassxc-proxy
+#private-bin keepassxc-proxy
+private-bin bash,firefox,sh,dbus-launch,dbus-send,env,which,keepassxc-proxy,pipewire,xdg-dbus-proxy,ffmpeg
+
+# needed to make audio work
+include whitelist-runuser-common.inc  # NOTE: at some point, check what in this list makes audio work
+
+

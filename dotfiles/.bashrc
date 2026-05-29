@@ -16,6 +16,11 @@ NC='[0m' # No Color or formatting, use at end
 [[ $- != *i* ]] && return
 
 export EDITOR="vim"
+# start ssh-agent 
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    eval $(ssh-agent -s)
+fi
+
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'

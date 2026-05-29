@@ -1,0 +1,59 @@
+include default.local
+# Persistent global definitions
+include globals.local
+include firefox.profile
+apparmor
+#x11
+netfilter /etc/firejail/nolocal.net
+#whitelist ~/downloads/firefox
+#rlimit-as 2000000000000
+
+caps.drop all
+# ipc-namespace
+machine-id
+# net none
+# netfilter
+no3d
+nodbus
+nodvd
+nosound
+novideo
+
+nogroups
+nonewprivs
+noroot
+noautopulse
+notv
+nou2f
+protocol unix,inet,inet6
+# shell none
+# tracelog
+seccomp
+disable-mnt
+# private
+# private-bin program
+
+private-cache
+private-dev
+# private-etc alternatives
+private-lib
+private-tmp
+
+# see if this fixes videos not having sound issue
+#ignore novideo
+#ignore nosound
+
+
+# needed to make KeePassXC work
+#ignore include whitelist-runuser-common.inc
+#whitelist ${RUNUSER}/kpxc_server
+#whitelist ${RUNUSER}/org.keepassxc.KeePassXC.BrowserServer
+#writable-run-user
+
+# arch linux needs shell to launch Firefox
+private-bin bash,dbus-launch,dbus-send,env,firefox,sh,which
+
+
+
+# unsure if needed, but will also need to be in firefox-common.local
+private-etc firefox

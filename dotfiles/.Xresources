@@ -14,6 +14,9 @@ URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 !URxvt.depth: 24
 
+!!! Font
+URxvt.font: xft:Terminess Nerd Font Mono:size=12
+
 !!URxvt extensions
 
 URxvt.perl-ext-common: tabbed,default,clipboard,url-select,keyboard-select

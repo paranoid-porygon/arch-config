@@ -19,10 +19,8 @@
 # * terminator
 # * arch-wiki-lite
 # * clamav
-# * expressvpn
 # * git
 # * keepassxc (or a cli alternative?)
-# * midori
 # * neofetch
 # * privoxy
 # * pipewire and alsa/pulse/jack packages
@@ -64,18 +62,23 @@
 # * fix suspend issues via grub config
 # * rclone configuration
 
+mkdir ~/syncthing
+mkdir ~/git-repos
 
 # install software
-#sudo pacman -S i3-wm i3status-rust otf-font-awesome dmenu sxhkd fbctrl rxvt-unicode xsel urxvt-perls vim vim-jedi glow w3m apparmor iptables clamav rkhunter firejail keepassxc privoxy tor signal-desktop base-devel git rclone pipewire pavucontrol firefox libreoffice-fresh newsboat unzip
 
-sudo pacman -S - < pacman-pkglist.txt
+#sudo pacman -S - < pacman-pkglist.txt
+sudo pacman -S base-devel git less vim
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 yay --version
 
-yay -S mullvad-vpn-bin
+#yay -S mullvad-vpn-bin
+yay -S - < pkglist.txt
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 # update config files
 
@@ -89,6 +92,7 @@ yay -S mullvad-vpn-bin
 # *ping
 # *firefox
 # *tor
+
 
 ## fix suspend issues via grub config
 # https://wiki.archlinux.org/title/Chrome_OS_devices#Fixing_suspend

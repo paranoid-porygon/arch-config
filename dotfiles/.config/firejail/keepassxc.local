@@ -1,7 +1,7 @@
 # Whitelist password database directory
 mkdir ${HOME}/keys/keepass
 whitelist ${HOME}/keys/keepass
-
+whitelist ${HOME}/syncthing/keys
 whitelist ${HOME}/downloads/firefox/lp
 
 # Whitelist Firefox Browser Plugin
