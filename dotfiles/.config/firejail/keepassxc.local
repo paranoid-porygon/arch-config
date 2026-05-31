@@ -2,7 +2,6 @@
 mkdir ${HOME}/keys/keepass
 whitelist ${HOME}/keys/keepass
 whitelist ${HOME}/syncthing/keys
-whitelist ${HOME}/downloads/firefox/lp
 
 # Whitelist Firefox Browser Plugin
 mkdir ${HOME}/.mozilla/native-messaging-hosts

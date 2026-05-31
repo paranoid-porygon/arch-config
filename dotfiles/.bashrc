@@ -16,10 +16,11 @@ NC='[0m' # No Color or formatting, use at end
 [[ $- != *i* ]] && return
 
 export EDITOR="vim"
+export GNUPGHOME="~/syncthing/keys/gnupg"
 # start ssh-agent 
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    eval $(ssh-agent -s)
-fi
+#if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#    eval $(ssh-agent -s)
+#fi
 
 
 alias ls='ls --color=auto'
@@ -28,6 +29,7 @@ alias grep='grep --color=auto'
 alias ll='ls -la --color=auto'
 alias lll='ls -la | less'
 alias cd..='cd ..'
+alias updl='upower -d | less'
 
 # alias custom scripts
 #alias connect_to_wifi='exec /home/coolporygon/scripts/connect_to_wifi.sh'

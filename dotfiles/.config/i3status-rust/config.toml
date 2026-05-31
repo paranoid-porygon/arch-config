@@ -14,7 +14,7 @@ icons = "awesome4"
 
 [[block]]
 block = "battery"
-interval = 60
+interval = 5
 full_format = " $icon $percentage "
 empty_format = " $icon $time_remaining "
 charging_format = " $icon $time_remaining "

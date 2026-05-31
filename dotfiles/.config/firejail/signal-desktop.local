@@ -1,3 +1,6 @@
 apparmor
 
+mkdir ~/downloads/signal-desktop
+whitelist ~/downloads/signal-desktop
+
 rlimit-as 1000000000000

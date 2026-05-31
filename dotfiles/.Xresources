@@ -28,6 +28,6 @@ URxvt.keysym.M-C-v: perl:clipboard:paste
 
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 
-URxvt.urlLauncher: dillo
+URxvt.urlLauncher: w3m
 URxvt.underlineURLs: true
 URxvt.urlButton: 1

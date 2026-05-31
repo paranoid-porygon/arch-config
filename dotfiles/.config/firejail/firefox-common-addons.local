@@ -1,7 +1,8 @@
-#private-bin keepassxc-proxy
 private-bin bash,firefox,sh,dbus-launch,dbus-send,env,which,keepassxc-proxy,pipewire,xdg-dbus-proxy,ffmpeg
+#private-bin keepassxc-proxy
 
 # needed to make audio work
 include whitelist-runuser-common.inc  # NOTE: at some point, check what in this list makes audio work
-
+#whitelist ${RUNUSER}/pulse/native
+#whitelist ${RUNUSER}/pipewire-?
 

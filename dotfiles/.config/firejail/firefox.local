@@ -16,8 +16,8 @@ whitelist ${RUNUSER}/org.keepassxc.KeePassXC.BrowserServer
 writable-run-user
 
 # arch linux needs shell to launch Firefox
-#private-bin bash,dbus-launch,dbus-send,env,firefox,sh,which,keepassxc-proxy
 private-bin bash,firefox,sh,dbus-launch,dbus-send,env,which,keepassxc-proxy,pipewire,xdg-dbus-proxy,ffmpeg
+#private-bin bash,dbus-launch,dbus-send,env,firefox,sh,which,keepassxc-proxy
 
 # unsure if needed, but will also need to be in firefox-common.local
 #private-etc firefox
